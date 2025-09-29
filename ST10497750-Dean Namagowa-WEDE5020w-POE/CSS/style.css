@@ -1,0 +1,485 @@
+body {
+  background-color: rgb(177, 177, 172);
+  font-family: Montserrat, Arial, sans-serif;
+  line-height: 1.6;
+  color: black;
+}
+/* ===== HEADER ===== */
+header {
+  display: flex; /* horizontal layout */
+  align-items: center; /* vertically center logo + nav */
+  justify-content: space-between; /* space between logo and nav */
+  padding: 1rem 1rem;
+  background-color: rgb(21, 26, 26);
+  color: beige;
+}
+
+/* Logo styling */
+header .logo img {
+  max-height: 70px;
+  width: auto;
+  border-radius: 12px;
+}
+
+/* Nav links */
+header nav {
+  display: flex;
+  gap: 0.5rem; /* space between links */
+}
+
+header nav a {
+  color: beige;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+header nav a:hover {
+  background-color: black;
+  border-radius: 10px;
+}
+/* START OF HOME PAGE STYLING */
+main .welcome-text {
+  text-align: center;
+  margin: 0.5rem 0;
+  font-family: Cinzel, serif;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: rgb(21, 26, 26);
+  margin: 0rem 0;
+}
+
+main .gallery-grid-container {
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 2px; /* Space between items */
+  align-items: center; /* Vertically center items */
+  margin: 0rem 0; /* Margin around the grid */
+  padding: 7rem; /* Padding inside the grid */
+}
+
+main .gallery-image img {
+  display: block;
+  width: 90%; /* Make image take full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 0.5rem auto;
+}
+main .text-content h2 {
+  margin-top: 0;
+}
+main .text-content {
+  padding: 3rem; /* Padding inside text content */
+  background-color: rgb(177, 177, 169); /* Light background for contrast */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-family: Cinzel, serif;
+}
+
+h3 {
+  text-align: center;
+  margin: 1rem 0;
+  font-family: Cinzel, serif;
+}
+
+main .present-images {
+  display: flex; /* puts them next to each other */
+  gap: 20px; /* space between the images */
+  justify-content: center; /* centers the row */
+  padding: 1rem 0; /* space above and below the first row */
+  box-shadow: 0 5px 10px rgba(20, 20, 20, 0.1);
+}
+
+main .present-images img {
+  border-radius: 8px; /* rounded corners */
+}
+
+main .present2-images {
+  display: flex; /* puts them next to each other */
+  gap: 20px; /* space between the images */
+  justify-content: center; /* centers the row */
+  margin-top: 1rem; /* space above the second row */
+  padding-bottom: 1rem; /* space below the second row */
+  box-shadow: 0 5px 10px rgba(14, 13, 13, 0.1);
+}
+
+main .present2-images img {
+  border-radius: 8px; /* rounded corners */
+}
+
+main .link-btn {
+  display: inline-block;
+  padding: 6px 12px; /* small size */
+  background-color: rgb(21, 26, 26); /* button color */
+  color: beige; /* text color */
+  font-size: 0.9rem; /* small text */
+  font-family: "Poppins", sans-serif; /* nice modern font */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none; /* removes underline if it's a link */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+main .link-btn:hover {
+  background-color: rgb(0, 0, 0); /* darker on hover */
+  transform: scale(1.05); /* tiny grow effect */
+}
+main .ending {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgb(21, 26, 26);
+  color: beige;
+  margin-top: 2rem;
+}
+footer p {
+  margin: 0;
+}
+
+/* RESPONSIVENESS STYLING */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  main .gallery-grid-container {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  main .present-images,
+  main .present2-images {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+/* END OF HOME PAGE STYLING */
+
+main .history-text {
+  background-color: rgb(177, 177, 169); /* box background */
+  border-radius: 8px; /* rounded corners */
+  padding: 15px; /* space inside */
+  margin: 10px auto; /* space outside + center horizontally */
+  max-width: 85%; /* control width */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* optional shadow */
+  font-family: Montserrat, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.artist-show h2 {
+  text-align: center;
+  font-family: Cinzel, serif;
+}
+main .first-artist {
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 1px; /* Space between items */
+  align-items: center; /* Vertically center items */
+  margin: 0rem 0; /* Margin around the grid */
+  padding: 5rem; /* Padding inside the grid */
+}
+
+main .first-artist img {
+  display: block;
+  width: 90%; /* Make image take full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 1rem auto;
+}
+
+main .second-artist {
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 1px; /* Space between items */
+  align-items: center; /* Vertically center items */
+  margin: 0rem 0; /* Margin around the grid */
+  padding: 5rem; /* Padding inside the grid */
+}
+
+main .second-artist img {
+  display: block;
+  width: 90%; /* Make image take full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 2rem auto;
+}
+
+main .third-artist {
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 1px; /* Space between items */
+  align-items: center; /* Vertically center items */
+  margin: 0rem 0; /* Margin around the grid */
+  padding: 10rem; /* Padding inside the grid */
+}
+
+main .third-artist img {
+  display: block;
+  width: 90%; /* Make image take full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 0.5rem auto;
+}
+
+main .artist1-intro {
+  padding: 3rem; /* Padding inside text content */
+  background-color: rgb(177, 177, 169); /* Light background for contrast */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-family: Cinzel, serif;
+}
+
+main .artist2-intro {
+  padding: 3rem; /* Padding inside text content */
+  background-color: rgb(177, 177, 169); /* Light background for contrast */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-family: Cinzel, serif;
+}
+
+main .artist3-intro {
+  padding: 3rem; /* Padding inside text content */
+  background-color: rgb(177, 177, 169); /* Light background for contrast */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-family: Cinzel, serif;
+}
+/* RESPONSIVENESS STYLING */
+
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  main .first-artist,
+  main .second-artist,
+  main .third-artist {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+}
+
+/* END OF ABOUT PAGE STYLING */
+
+/* START OF PRODUCTS PAGE STYLING */
+main .product-page {
+  text-align: center;
+  padding: 2rem;
+}
+h1 {
+  text-align: center;
+  margin: 1rem 0;
+  font-family: Cinzel, serif;
+}
+h2 {
+  text-align: center;
+  margin: 1rem 0;
+  font-family: Cinzel, serif;
+}
+h4 {
+  text-align: center;
+  margin: 1rem 0;
+  font-family: Cinzel, serif;
+}
+
+main.pencilart-images {
+  display: flex; /* puts items in a row */
+  flex-wrap: wrap; /* wrap to next line if too wide */
+  gap: 10px; /* space between images */
+  justify-content: center; /* center images */
+}
+
+main .pencilart-images img {
+  width: 400px; /* set a width so they’re equal size */
+  height: auto;
+  border-radius: 4px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional shadow */
+  margin: 10px; /* space around each image */
+  align-items: center;
+}
+
+main .smallpaintings-images {
+  display: flex; /* puts items in a row */
+  flex-wrap: wrap; /* wrap to next line if too wide */
+  gap: 10px; /* space between images */
+  justify-content: center; /* center images */
+}
+
+main .smallpaintings-images img {
+  width: 650px; /* set a width so they’re equal size */
+  height: auto;
+  border-radius: 4px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional shadow */
+  margin: 10px; /* space around each image */
+  align-items: center;
+}
+
+main .othersmall {
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 2px; /* Space between items */
+  align-items: center; /* Vertically center items */
+  margin: 0rem 0; /* Margin around the grid */
+  padding: 2rem;
+}
+
+main .other-artworks {
+  display: flex; /* puts items in a row */
+  flex-wrap: wrap; /* wrap to next line if too wide */
+  gap: 10px; /* space between images */
+  justify-content: center; /* center images */
+}
+
+main .other-artworks img {
+  width: 400px; /* set a width so they’re equal size */
+  height: auto;
+  border-radius: 4px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional shadow */
+  margin: 10px; /* space around each image */
+  align-items: center;
+}
+
+main .small-images {
+  display: flex; /* puts items in a row */
+  flex-wrap: wrap; /* wrap to next line if too wide */
+  gap: 10px; /* space between images */
+  justify-content: center; /* center images */
+}
+
+main .small-images img {
+  width: 300px; /* smaller width for small images */
+  height: auto;
+  border-radius: 4px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional shadow */
+  margin: 10px; /* space around each image */
+  align-items: center;
+}
+
+/* RESPONSIVENESS STYLING */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  main .othersmall {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  main .pencilart-images img,
+  main .smallpaintings-images img,
+  main .other-artworks img,
+  main .small-images img {
+    width: 90%; /* Make images take full width on small screens */
+  }
+}
+
+/* END OF PRODUCTS PAGE STYLING */
+/* START OF ART EVENTS PAGE STYLING */
+
+main .art-events {
+  display: flex; /* puts items in a row */
+  flex-wrap: wrap; /* wrap to next line if too wide */
+  gap: 10px; /* space between images */
+  justify-content: center; /* center images */
+}
+
+main .art-events img {
+  width: 650px; /* set a width so they’re equal size */
+  height: auto;
+  border-radius: 4px; /* optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional shadow */
+  margin: 10px; /* space around each image */
+  align-items: center;
+}
+
+/* START OF CONTACT PAGE STYLING */
+main .contact-page {
+  text-align: center;
+  padding: 2rem;
+}
+main .contact-logo img {
+  max-height: 200px;
+  width: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  float: left;
+}
+main .contact-info {
+  background-color: rgb(170, 170, 162); /* soft background */
+  padding: 40px 20px; /* breathing space */
+  text-align: center; /* center everything */
+  border-top: 3px solid #cfcaca; /* a subtle divider at top */
+  font-family: "Poppins", sans-serif; /* nice modern font */
+  line-height: 1.6;
+}
+
+main .contact-info h2 {
+  font-size: 1.8rem;
+  color: #1b1a1a;
+  margin-bottom: 20px;
+}
+
+main .contact-info p {
+  max-width: 600px; /* keep text readable */
+  margin: 0 auto 15px auto; /* center paragraphs */
+  color: #555;
+}
+
+main .contact-info a {
+  color: #333; /* link color */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+main .contact-info a:hover {
+  color: #666; /* subtle hover color */
+  text-decoration: underline;
+}
+
+main .map-wrap {
+  width: 100%;
+  max-width: 900px; /* control max size */
+  margin: 1.5rem auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden; /* keeps rounded corners for iframe */
+}
+
+main .map-wrap iframe {
+  width: 100%;
+  height: 400px; /* adjust height as needed */
+  display: block;
+  border: 0;
+}
+/* RESPONSIVENESS STYLING */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  main .contact-logo {
+    float: none;
+    margin: 0 auto 20px auto;
+  }
+}
+/* END OF CONTACT PAGE STYLING */
