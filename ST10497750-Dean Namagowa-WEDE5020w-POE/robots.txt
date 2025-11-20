@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://canvasandco.com/sitemap.xml

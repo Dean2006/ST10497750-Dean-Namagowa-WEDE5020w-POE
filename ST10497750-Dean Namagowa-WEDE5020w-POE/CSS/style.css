@@ -4,6 +4,12 @@ body {
   line-height: 1.6;
   color: black;
 }
+
+.dark {
+  background: #111;
+  color: #eee;
+}
+
 /* ===== HEADER ===== */
 header {
   display: flex; /* horizontal layout */
@@ -139,7 +145,7 @@ main .ending {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: rgb(21, 26, 26);
+  background-color: rgb(42, 53, 53);
   color: beige;
   margin-top: 2rem;
 }
@@ -166,6 +172,7 @@ footer p {
 }
 /* END OF HOME PAGE STYLING */
 
+/* About page styling */
 main .history-text {
   background-color: rgb(177, 177, 169); /* box background */
   border-radius: 8px; /* rounded corners */
@@ -188,7 +195,7 @@ main .first-artist {
   gap: 1px; /* Space between items */
   align-items: center; /* Vertically center items */
   margin: 0rem 0; /* Margin around the grid */
-  padding: 5rem; /* Padding inside the grid */
+  padding: 1.5rem; /* Padding inside the grid */
 }
 
 main .first-artist img {
@@ -207,7 +214,7 @@ main .second-artist {
   gap: 1px; /* Space between items */
   align-items: center; /* Vertically center items */
   margin: 0rem 0; /* Margin around the grid */
-  padding: 5rem; /* Padding inside the grid */
+  padding: 1.5rem; /* Padding inside the grid */
 }
 
 main .second-artist img {
@@ -226,7 +233,7 @@ main .third-artist {
   gap: 1px; /* Space between items */
   align-items: center; /* Vertically center items */
   margin: 0rem 0; /* Margin around the grid */
-  padding: 10rem; /* Padding inside the grid */
+  padding: 1.5rem; /* Padding inside the grid */
 }
 
 main .third-artist img {
@@ -275,7 +282,6 @@ main .artist3-intro {
     grid-template-columns: 1fr; /* Single column layout */
   }
 }
-
 /* END OF ABOUT PAGE STYLING */
 
 /* START OF PRODUCTS PAGE STYLING */
@@ -391,10 +397,9 @@ main .small-images img {
     width: 90%; /* Make images take full width on small screens */
   }
 }
-
 /* END OF PRODUCTS PAGE STYLING */
-/* START OF ART EVENTS PAGE STYLING */
 
+/* START OF ART EVENTS PAGE STYLING */
 main .art-events {
   display: flex; /* puts items in a row */
   flex-wrap: wrap; /* wrap to next line if too wide */
@@ -482,4 +487,93 @@ main .map-wrap iframe {
     margin: 0 auto 20px auto;
   }
 }
+
+/* ————————————————
+   CONTACT FORM STYLING
+——————————————— */
+
+form {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+form label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.25s ease;
+  background: #fafafa;
+}
+
+/* Input focus effect */
+form input:focus,
+form textarea:focus {
+  border-color: #000000; /* Soft violet/indigo */
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
+  background: rgb(221, 221, 209);
+}
+
+/* Button styling */
+form button {
+  padding: 14px;
+  background: rgb(146, 146, 129);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+form button:hover {
+  background: rgb(172, 172, 165);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(100, 100, 102, 0.3);
+}
+
+/* Align form paragraphs better */
+.contact-info p {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
 /* END OF CONTACT PAGE STYLING */
+
+/* ANIMATION STYLING */
+.contact-info,
+.map-wrap {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ACTIVE NAV LINK STYLING */
+
+nav a.active {
+  color: rgb(138, 136, 128);
+  font-weight: bold;
+}

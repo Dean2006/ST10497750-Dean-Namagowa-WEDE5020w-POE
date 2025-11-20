@@ -2,14 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Canvas & Co. Art Gallery in Johannesburg. Contact us for inquiries, collaborations, or feedback. Get in touch today!"
+    />
+    <meta
+      property="og:title"
+      content="CANVAS & Co | Art Gallery in Johannesburg"
+    />
+    <meta
+      property="og:description"
+      content="Explore Canvas & Co., a premier art gallery showcasing unique artworks and exhibitions."
+    />
+    <meta property="og:image" content="images/gallery-og.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://canvasandco.com/index.html" />
+    >
     <title>CANVAS & Co | Contact Information</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
       <div class="logo">
-        <img src="images/LOGO.jpg" alt="" />
+        <img src="images/LOGO.jpg" alt="comapany logo" />
       </div>
 
       <nav>
@@ -19,6 +34,7 @@
         <a href="events.html">Art Events.</a>
         <a href="contact.html">Contact Information.</a>
       </nav>
+      <button id="toggle-dark">Dark Mode</button>
     </header>
 
     <main class="contact-page">
@@ -36,6 +52,36 @@
           Canvas & Co. exists to make art accessible, inspiring and alive within
           our community.
         </p>
+
+        <form id="contactForm" action="#" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone Number (optional):</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{10}"
+            placeholder="0711234567"
+          />
+
+          <label for="messageType">Type of Message:</label>
+          <select id="messageType" name="messageType" required>
+            <option value="">Select one</option>
+            <option value="general">General Inquiry</option>
+            <option value="collaboration">Collaboration</option>
+            <option value="feedback">Feedback</option>
+          </select>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
 
         <p>
           📞 +27 11 123 4567<br />
@@ -71,7 +117,13 @@
     </main>
 
     <footer>
-      <p>Copyright &copy; 2025 CANVAS & Co.</p>
+      <p>
+        Copyright &copy; 2025 CANVAS & Co. | 📧
+        <a href="mailto:info@canvasandco.com"
+          >info@canvasandco.com | 📞 +27 11 123 4567</a
+        >
+      </p>
     </footer>
+    <script src="JS/script.js"></script>
   </body>
 </html>
